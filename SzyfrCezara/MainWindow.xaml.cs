@@ -31,7 +31,7 @@ namespace SzyfrCezara
             encryptCipherKey = Convert.ToInt32(textBox3.Text);
             if (encryptCipherKey > 34 || encryptCipherKey < 1)
             {
-                MessageBox.Show("Podaj wartość z przedziału 1 do 34");
+                MessageBox.Show("Choose value from 1 to 34.");
             }
             else
             {
@@ -76,7 +76,7 @@ namespace SzyfrCezara
 
             if (decryptCipherKey > 34 || decryptCipherKey < 1)
             {
-                MessageBox.Show("Podaj wartość z przedziału 1 do 34");
+                MessageBox.Show("Choose value from 1 to 34.");
             }
             else
             {
