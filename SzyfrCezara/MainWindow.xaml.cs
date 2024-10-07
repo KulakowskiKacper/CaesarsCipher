@@ -42,11 +42,6 @@ namespace SzyfrCezara
 
         }
 
-        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void EncryptText()
         {
             StringBuilder sb = new StringBuilder();
@@ -71,6 +66,20 @@ namespace SzyfrCezara
                 }
             }
             textBox2.Text += sb.ToString();
+        }
+
+        private string textToDecrypt = "";
+        private int decryptCipherKey;
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            decryptCipherKey = Convert.ToInt32(decryptCipherKeyTextBox.Text);
+            textToDecrypt = decryptTextBox.Text;
+            decryptedTextBox.Clear();
+        }
+
+        private void DecryptText()
+        {
+
         }
     }
 }
