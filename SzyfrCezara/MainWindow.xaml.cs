@@ -73,13 +73,42 @@ namespace SzyfrCezara
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             decryptCipherKey = Convert.ToInt32(decryptCipherKeyTextBox.Text);
-            textToDecrypt = decryptTextBox.Text;
-            decryptedTextBox.Clear();
+            if (decryptCipherKey > 34 || decryptCipherKey < 1)
+            {
+                MessageBox.Show("Podaj wartość z przedziału 1 do 34");
+            }
+            else
+            {
+                decryptedTextBox.Clear();
+                textToDecrypt = decryptTextBox.Text.ToLower().Replace(" ", string.Empty);
+                DecryptText();
+            }
         }
 
         private void DecryptText()
         {
+            StringBuilder sb = new StringBuilder();
 
+            for (int i = 0; i < textToDecrypt.Length; i++)
+            {
+                for (int j = 0; j < alfabet.Length; j++)
+                {
+                    if (textToDecrypt[i] == alfabet[j])
+                    {
+                        if (j - encryptCipherKey < 0)
+                        {
+                            sb.Append(alfabet[alfabetLength - Math.Abs(j - decryptCipherKey)]);
+                            continue;
+                        }
+                        else
+                        {
+                            sb.Append(alfabet[j - decryptCipherKey]);
+                            continue;
+                        }
+                    }
+                }
+            }
+            decryptedTextBox.Text += sb.ToString();
         }
     }
 }

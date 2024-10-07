@@ -9,13 +9,13 @@
     <Grid>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Wpisz tekst..." VerticalAlignment="Top" Width="238" Height="112"/>
         <Button x:Name="bttn1" Content="Szyfruj" HorizontalAlignment="Left" Margin="110,127,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="253,10,0,0" TextWrapping="Wrap" Text="Tutaj wyświetli się zaszyfrowany text..." VerticalAlignment="Top" Width="253" Height="112" FontStyle="Italic" IsEnabled="False"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="253,10,0,0" TextWrapping="Wrap" Text="Tutaj wyświetli się zaszyfrowany text..." VerticalAlignment="Top" Width="253" Height="112" FontStyle="Italic"/>
         <TextBlock HorizontalAlignment="Left" Margin="578,10,0,0" TextWrapping="Wrap" Text="Wprowadź klucz szyfrujący" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="610,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="61" FontSize="48" TextAlignment="Center"/>
         <TextBox x:Name="decryptTextBox" HorizontalAlignment="Left" Margin="10,178,0,0" TextWrapping="Wrap" Text="Wpisz tekst..." VerticalAlignment="Top" Width="238" Height="112"/>
-        <TextBox x:Name="decryptedTextBox" HorizontalAlignment="Left" Margin="253,178,0,0" TextWrapping="Wrap" Text="Tutaj wyświetli się zdeszyfrowany tekst..." VerticalAlignment="Top" Width="253" Height="112" IsEnabled="False" FontStyle="Italic"/>
+        <TextBox x:Name="decryptedTextBox" HorizontalAlignment="Left" Margin="253,178,0,0" TextWrapping="Wrap" Text="Tutaj wyświetli się zdeszyfrowany tekst..." VerticalAlignment="Top" Width="253" Height="112" FontStyle="Italic"/>
         <TextBlock HorizontalAlignment="Left" Margin="578,178,0,0" TextWrapping="Wrap" Text="Wprowadź klucz deszyfrujący" VerticalAlignment="Top"/>
-        <TextBox x:Name="decryptCipherKeyTextBox" HorizontalAlignment="Left" Margin="610,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="60"/>
+        <TextBox x:Name="decryptCipherKeyTextBox" HorizontalAlignment="Left" Margin="610,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="60" FontSize="48" TextAlignment="Center"/>
         <Button Content="Odszyfruj" HorizontalAlignment="Left" Margin="98,295,0,0" VerticalAlignment="Top" Width="62" Click="Button_Click_1"/>
     </Grid>
 </Window>
