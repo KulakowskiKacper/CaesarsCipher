@@ -18,7 +18,7 @@ namespace SzyfrCezara
     public partial class MainWindow : Window
     {
         readonly char[] alfabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ż', 'ź' };
-        private const int alfabetLength = 35;
+        private const int ALFABETLENGTH = 35;
         private string textToEncrypt = "";
         private int encryptCipherKey;
         public MainWindow()
@@ -54,7 +54,7 @@ namespace SzyfrCezara
                     {
                         if (j + encryptCipherKey >= alfabet.Length)
                         {
-                            sb.Append(alfabet[j + encryptCipherKey - alfabetLength]);
+                            sb.Append(alfabet[j + encryptCipherKey - ALFABETLENGTH]);
                             continue;
                         }
                         else
@@ -73,6 +73,7 @@ namespace SzyfrCezara
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             decryptCipherKey = Convert.ToInt32(decryptCipherKeyTextBox.Text);
+
             if (decryptCipherKey > 34 || decryptCipherKey < 1)
             {
                 MessageBox.Show("Podaj wartość z przedziału 1 do 34");
@@ -97,7 +98,7 @@ namespace SzyfrCezara
                     {
                         if (j - encryptCipherKey < 0)
                         {
-                            sb.Append(alfabet[alfabetLength - Math.Abs(j - decryptCipherKey)]);
+                            sb.Append(alfabet[ALFABETLENGTH - Math.Abs(j - decryptCipherKey)]);
                             continue;
                         }
                         else
