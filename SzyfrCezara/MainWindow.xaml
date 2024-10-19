@@ -17,7 +17,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="605,188,0,0" TextWrapping="Wrap" Text="Enter cipher key:" VerticalAlignment="Top"/>
         <TextBox x:Name="decryptCipherKeyTextBox" HorizontalAlignment="Left" Margin="610,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="60" FontSize="48" TextAlignment="Center"/>
         <Button Content="Decrypt" HorizontalAlignment="Left" Margin="101,300,0,0" VerticalAlignment="Top" Width="62" Click="Button_Click_1"/>
-        <Button x:Name="Btn_SaveDecrypted" Content="Save" HorizontalAlignment="Left" Margin="365,300,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Btn_SaveEncryoted" Content="Save" HorizontalAlignment="Left" Margin="360,127,0,0" VerticalAlignment="Top" Click="Btn_SaveEncryoted_Click"/>
+        <Button x:Name="Btn_SaveDecrypted" Content="Save" HorizontalAlignment="Left" Margin="365,300,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="Btn_SaveEncryoted" Content="Save" HorizontalAlignment="Left" Margin="360,127,0,0" VerticalAlignment="Top" Click="Btn_SaveEncryoted_Click" Width="40"/>
     </Grid>
 </Window>

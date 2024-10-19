@@ -120,7 +120,9 @@ namespace SzyfrCezara
 
         private void Btn_SaveEncryoted_Click(object sender, RoutedEventArgs e)
         {
-
+            StreamWriter streamWriter = new StreamWriter("text.txt");
+            streamWriter.Write(encryptedText);
+            streamWriter.Close();
         }
     }
 }
