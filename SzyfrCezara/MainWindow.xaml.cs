@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace SzyfrCezara
 {
@@ -21,6 +22,9 @@ namespace SzyfrCezara
         private const int ALFABETLENGTH = 35;
         private string textToEncrypt = "";
         private int encryptCipherKey;
+
+        private string encryptedText;
+        private string decryptedText;
         public MainWindow()
         {
             InitializeComponent();
@@ -66,6 +70,7 @@ namespace SzyfrCezara
                 }
             }
             textBox2.Text += sb.ToString();
+            encryptedText = sb.ToString();
         }
 
         private string textToDecrypt = "";
@@ -110,6 +115,12 @@ namespace SzyfrCezara
                 }
             }
             decryptedTextBox.Text += sb.ToString();
+            decryptedText = sb.ToString();
+        }
+
+        private void Btn_SaveEncryoted_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
